@@ -15,7 +15,6 @@ var checkValidGrid = function (grid) {
     fillArrayCoordinatesConsecutiveMoves(grid, coordinatesConsecutiveMoves);
 
     return eachConsecutiveMoveIsValid(coordinatesConsecutiveMoves);
-
 };
 
 /**
