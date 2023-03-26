@@ -16,10 +16,10 @@ public class Solution {
         Point[] coordinatesConsecutiveMoves = new Point[rows * columns];
         fillArrayCoordinatesConsecutiveMoves(grid, coordinatesConsecutiveMoves);
 
-        return eachConsecutiveMovesIsValid(coordinatesConsecutiveMoves);
+        return eachConsecutiveMoveIsValid(coordinatesConsecutiveMoves);
     }
 
-    private boolean eachConsecutiveMovesIsValid(Point[] coordinatesConsecutiveMoves) {
+    private boolean eachConsecutiveMoveIsValid(Point[] coordinatesConsecutiveMoves) {
         for (int i = 1; i < coordinatesConsecutiveMoves.length; ++i) {
             if (!isValidKnightMove(coordinatesConsecutiveMoves[i - 1], coordinatesConsecutiveMoves[i])) {
                 return false;
