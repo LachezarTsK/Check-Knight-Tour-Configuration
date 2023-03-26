@@ -14,7 +14,7 @@ var checkValidGrid = function (grid) {
     const coordinatesConsecutiveMoves = new Array(this.rows * this.columns);
     fillArrayCoordinatesConsecutiveMoves(grid, coordinatesConsecutiveMoves);
 
-    return eachConsecutiveMovesIsValid(coordinatesConsecutiveMoves);
+    return eachConsecutiveMoveIsValid(coordinatesConsecutiveMoves);
 
 };
 
@@ -32,7 +32,7 @@ function Point(row, column) {
  * @param {Point[]} coordinatesConsecutiveMoves
  * @return {boolean}
  */
-function eachConsecutiveMovesIsValid(coordinatesConsecutiveMoves) {
+function eachConsecutiveMoveIsValid(coordinatesConsecutiveMoves) {
     for (let i = 1; i < coordinatesConsecutiveMoves.length; ++i) {
         if (!isValidKnightMove(coordinatesConsecutiveMoves[i - 1], coordinatesConsecutiveMoves[i])) {
             return false;
